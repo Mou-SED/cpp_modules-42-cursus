@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 15:15:48 by moseddik          #+#    #+#             */
-/*   Updated: 2022/10/18 22:33:23 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/11/21 14:47:14 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ int main (int ac, char **av)
 				std::cout << (char)toupper(str[j]);
 				j++;
 			}
-			if (i + 1 < ac)
-				std::cout << ' ';
 			i++;
 		}
 		std::cout << std::endl;
