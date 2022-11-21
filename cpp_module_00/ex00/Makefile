@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 15:15:20 by moseddik          #+#    #+#              #
-#    Updated: 2022/10/18 20:53:07 by moseddik         ###   ########.fr        #
+#    Updated: 2022/11/18 17:26:15 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SRC				:= megaphone.cpp
 OBJ				:= $(SRC:.cpp=.o)
 
 # ****************************** Compiler Options ******************************
-CXX				:= g++
+CXX				:= c++
 CXXFLAGS		:= -Wall -Wextra -Werror -std=c++98
 
 # ******************************* Other commands *******************************
