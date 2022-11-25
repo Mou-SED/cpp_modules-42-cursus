@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/19 18:09:02 by moseddik          #+#    #+#              #
-#    Updated: 2022/11/21 14:17:27 by moseddik         ###   ########.fr        #
+#    Updated: 2022/11/24 16:36:11 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ OBJ_DIR			:= obj
 # *********************************** Files ************************************
 NAME			:= PhoneBook
 INC				:= PhoneBook.hpp
-SRC				:= main.cpp
+SRC				:= main.cpp PhoneBook.cpp
 OBJ				:= $(SRC:.cpp=.o)
 
 # ****************************** Compiler Options ******************************
