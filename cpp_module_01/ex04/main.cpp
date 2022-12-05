@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:51:20 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/05 09:07:23 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/05 09:10:51 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ int main(int ac, char **av)
 			rep_line += s2;
 			rep_line += line.substr(pos + s1.length());
 			line = rep_line;
-			std::cout << line << std::endl;
 			pos = line.find(s1);
 		}
 		fout << line << std::endl;
