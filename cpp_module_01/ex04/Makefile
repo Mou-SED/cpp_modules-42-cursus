@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/03 17:52:17 by moseddik          #+#    #+#              #
-#    Updated: 2022/12/04 05:08:48 by moseddik         ###   ########.fr        #
+#    Updated: 2022/12/05 09:06:57 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,7 @@ OBJ_DIR			:= obj
 
 # *********************************** Files ************************************
 NAME			:= replace
-INC				:= Replace.hpp
-SRC				:= main.cpp Replace.cpp
+SRC				:= main.cpp
 OBJ				:= $(SRC:.cpp=.o)
 
 # ****************************** Compiler Options ******************************
@@ -47,7 +46,7 @@ $(NAME): $(OBJ_DEP)
 	@echo "$(BLUE)Building	$(PURPLE)$(NAME)$(NC)"
 	@$(CXX) $(CXXFLAGS) $(OBJ_DEP) -o $(NAME)
 
-$(OBJ_DIR)/%.o:%.cpp $(INC)
+$(OBJ_DIR)/%.o:%.cpp
 	@$(MKDIR) $(OBJ_DIR)
 	@echo "$(GREEN)Compiling	$(YELLOW)$(shell basename $<)$(NC)"
 	@$(CXX) $(CFLAGS) -c $< -o $@
