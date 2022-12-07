@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:51:20 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/07 15:02:39 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/07 22:26:10 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int main(int ac, char **av)
 		std::cout << RED << "Error :( Can't create file" << std::endl;
 		(fin.close(), exit(EXIT_FAILURE));
 	}
-	while(getline(fin, line))
+	while(std::getline(fin, line))
 	{
 		size_t pos = line.find(s1);
 		while (s1 != s2 && pos != std::string::npos)
@@ -63,7 +63,10 @@ int main(int ac, char **av)
 			line = rep_line;
 			pos = line.find(s1 , pos + s2.size());
 		}
-		fout << line << std::endl;
+		if (fin.peek() != EOF)
+			fout << line << std::endl;
+		else
+			fout << line;
 	}
 	std::cout << GREEN << "Done :) check " << RESET << YELLOW << new_file << RESET << std::endl;
 	return (fin.close(), fout.close(), EXIT_SUCCESS);
