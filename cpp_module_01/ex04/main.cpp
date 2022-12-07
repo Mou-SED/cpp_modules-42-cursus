@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:51:20 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/05 09:10:51 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/07 15:02:39 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #define RED "\033[31m"
 #define GREEN "\033[32m"
+#define YELLOW "\033[33m"
 #define RESET "\033[0m"
 
 int main(int ac, char **av)
@@ -34,6 +35,11 @@ int main(int ac, char **av)
 	std::string rep_line;
 	std::string new_file = filename + ".replace";
 
+	if (s1 == "")
+	{
+		std::cout << RED << "Error :( s1 is empty" << std::endl;
+		exit(EXIT_FAILURE);
+	}
 	fin.open(filename, std::ios::in);
 	if (!fin.is_open())
 	{
@@ -46,11 +52,6 @@ int main(int ac, char **av)
 		std::cout << RED << "Error :( Can't create file" << std::endl;
 		(fin.close(), exit(EXIT_FAILURE));
 	}
-	if (s1 == "")
-	{
-		std::cout << RED << "Error :( s1 is empty" << std::endl;
-		(fin.close(), fout.close(), exit(EXIT_FAILURE));
-	}
 	while(getline(fin, line))
 	{
 		size_t pos = line.find(s1);
@@ -58,11 +59,12 @@ int main(int ac, char **av)
 		{
 			rep_line = line.substr(0, pos);
 			rep_line += s2;
-			rep_line += line.substr(pos + s1.length());
+			rep_line += line.substr(pos + s1.size());
 			line = rep_line;
-			pos = line.find(s1);
+			pos = line.find(s1 , pos + s2.size());
 		}
 		fout << line << std::endl;
 	}
+	std::cout << GREEN << "Done :) check " << RESET << YELLOW << new_file << RESET << std::endl;
 	return (fin.close(), fout.close(), EXIT_SUCCESS);
 }

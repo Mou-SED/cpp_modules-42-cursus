@@ -1,0 +1,4 @@
+you can change the word in this file and check the new file
+that created by the program.
+the name of the file is "the same name of file".replace
+change one word here and enjoy it!
