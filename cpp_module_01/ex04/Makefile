@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/03 17:52:17 by moseddik          #+#    #+#              #
-#    Updated: 2022/12/05 09:06:57 by moseddik         ###   ########.fr        #
+#    Updated: 2022/12/07 15:10:44 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ $(OBJ_DIR)/%.o:%.cpp
 clean:
 	@echo "$(RED)Removing	$(YELLOW)Object files$(NC)"
 	@$(RM) $(OBJ_DIR)
+	@$(RM) *.replace
 
 fclean: clean
 	@echo "$(RED)Removing	$(PURPLE)$(NAME)$(NC)"
