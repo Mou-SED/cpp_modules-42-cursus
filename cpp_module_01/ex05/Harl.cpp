@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 23:07:25 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/08 14:49:38 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/08 19:04:48 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void Harl::error( void )
 	std::cout << "ERROR" << std::endl;
 }
 
-void Harl::comlain( std::string level )
+void Harl::complain( std::string level )
 {
 	typedef void (Harl::*Func)(void);
 	Func func[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};

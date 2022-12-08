@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 23:06:59 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/08 14:41:57 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/08 19:04:43 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ class Harl
 	public:
 		Harl();
 		~Harl();
-		void comlain( std::string level );
+		void complain( std::string level );
 };

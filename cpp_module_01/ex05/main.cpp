@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 23:04:52 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/08 15:00:16 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/08 19:04:58 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ int main ( void )
 {
 	Harl harl;
 
-	harl.comlain("DEBUG");
-	harl.comlain("INFO");
-	harl.comlain("WARNING");
-	harl.comlain("ERROR");
-	harl.comlain("INVALID");
+	harl.complain("DEBUG");
+	harl.complain("INFO");
+	harl.complain("WARNING");
+	harl.complain("ERROR");
+	harl.complain("INVALID");
 
 	return (0);
 }
