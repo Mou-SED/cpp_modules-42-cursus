@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 23:07:25 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/08 19:04:48 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/09 03:54:25 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,30 @@
 
 Harl::Harl()
 {
-	std::cout << GREEN << "Harl is born" << RESET << std::endl;
 }
 
 Harl::~Harl()
 {
-	std::cout << RED << "Harl is dead" << RESET << std::endl;
 }
 
 void Harl::debug( void )
 {
-	std::cout << "DEBUG" << std::endl;
+	std::cout << "DEBUG MODE!" << std::endl;
 }
 
 void Harl::info( void )
 {
-	std::cout << "INFO" << std::endl;
+	std::cout << "INFO MODE!" << std::endl;
 }
 
 void Harl::warning( void )
 {
-	std::cout << "WARNING" << std::endl;
+	std::cout << "WARNING MODE!" << std::endl;
 }
 
 void Harl::error( void )
 {
-	std::cout << "ERROR" << std::endl;
+	std::cout << "ERROR MODE!" << std::endl;
 }
 
 void Harl::complain( std::string level )
@@ -56,5 +54,5 @@ void Harl::complain( std::string level )
 			return ;
 		}
 	}
-	std::cout << "INVALID" << std::endl;
+	std::cout << "INVALID MODE!" << std::endl;
 }
