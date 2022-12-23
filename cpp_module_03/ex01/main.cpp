@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 14:52:34 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/23 17:12:43 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:51:12 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	ScavTrap scavtrap("CL4P-TP");
+	ScavTrap scavtrap("SC4P-TP");
 
 	scavtrap.attack("target");
 	scavtrap.takeDamage(5);
