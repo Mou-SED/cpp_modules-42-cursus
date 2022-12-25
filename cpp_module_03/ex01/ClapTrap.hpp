@@ -6,15 +6,14 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 22:55:20 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/23 16:52:32 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/24 20:45:21 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <iostream>
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
+#include <iostream>
 #define GREEN "\033[0;32m"
 #define RED "\033[0;31m"
 #define RESET "\033[0m"
@@ -38,6 +37,8 @@ class ClapTrap
 		void	attack( std::string const & target );
 		void	takeDamage( unsigned int amount );
 		void	beRepaired( unsigned int amount );
+
+		std::string	getName( void ) const;
 };
 
 #endif
