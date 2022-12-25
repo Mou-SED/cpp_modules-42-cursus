@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 18:31:46 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/25 16:09:41 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/25 16:11:21 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ DiamondTrap::DiamondTrap( void )
 }
 
 DiamondTrap::DiamondTrap( std::string name )
-	: ClapTrap(name + "_clap_name"), _name(name)
+	: ClapTrap(name + "_clap_name"), ScavTrap(name), FragTrap(name), _name(name)
 {
 	std::cout << GREEN << "DiamondTrap constructor called" << RESET << std::endl;
 	this->_hitPoints = 100;
