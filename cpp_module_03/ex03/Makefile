@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/22 14:53:49 by moseddik          #+#    #+#              #
-#    Updated: 2022/12/23 18:45:34 by moseddik         ###   ########.fr        #
+#    Updated: 2022/12/25 15:00:25 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ OBJ				:= $(SRC:.cpp=.o)
 
 # ****************************** Compiler Options ******************************
 CXX				:= c++
-CXXFLAGS		:= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS		:= -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
 # ******************************* Other commands *******************************
 RM				:= rm -rf
