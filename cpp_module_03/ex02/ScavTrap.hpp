@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 12:52:39 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/24 21:07:16 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/25 13:17:34 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class ScavTrap : public ClapTrap
 		ScavTrap & operator=( ScavTrap const & other );
 
 		void	guardGate( void );
+		void	attack( std::string const & target );
 };
 
 #endif
