@@ -6,34 +6,35 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 18:31:46 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/24 21:32:54 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/25 14:51:45 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap( void )
+	: FragTrap(), ScavTrap()
 {
 	std::cout << GREEN << "DiamondTrap default constructor called" << RESET << std::endl;
-	this->_name = "Default DT";
+	this->_name = "Default-DT";
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 30;
 	return ;
 }
 
-DiamondTrap::DiamondTrap( std::string name ) : ClapTrap(name + "_clap_name"), _name(name)
+DiamondTrap::DiamondTrap( std::string name )
+	: ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name), _name(name)
 {
 	std::cout << GREEN << "DiamondTrap constructor called" << RESET << std::endl;
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 30;
-	std::cout << "DiamondTrap " << this->_name << " is created" << std::endl;
 	return ;
 }
 
 DiamondTrap::DiamondTrap( DiamondTrap const & src)
-	: FragTrap(src), ScavTrap(src), _name(src._name)
+	: FragTrap(src),ScavTrap(src), _name(src._name)
 {
 	std::cout << GREEN << "DiamondTrap copy constructor called" << RESET << std::endl;
 	*this = src;

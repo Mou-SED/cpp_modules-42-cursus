@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 14:52:34 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/24 16:19:20 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/25 14:53:07 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	DiamondTrap dimondTrap("DT4P-TP");
+	DiamondTrap dimondTrap(std::string("DT4P-TP"));
 
 	dimondTrap.attack("target");
 	dimondTrap.takeDamage(5);
