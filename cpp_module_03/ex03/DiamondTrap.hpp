@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 18:07:17 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/25 14:50:07 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/25 15:47:21 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class DiamondTrap : public ScavTrap, public FragTrap
 		DiamondTrap & operator=( DiamondTrap const & other );
 
 		using ScavTrap::attack;
+
+		void	whoAmI( void );
 
 };
 

@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 18:31:46 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/25 14:51:45 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/25 16:04:03 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,11 @@ DiamondTrap & DiamondTrap::operator=( DiamondTrap const & other)
 		this->_attackDamage = other._attackDamage;
 	}
 	return (*this);
+}
+
+void	DiamondTrap::whoAmI( void )
+{
+	std::cout << "DiamondTrap name: " << this->_name << std::endl;
+	std::cout << "ClapTrap name: " << this->ClapTrap::_name << std::endl;
+	return ;
 }

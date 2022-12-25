@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 14:52:34 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/25 14:53:07 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/25 15:48:01 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main()
 	dimondTrap.beRepaired(3);
 	dimondTrap.guardGate();
 	dimondTrap.highFivesGuys();
+	dimondTrap.whoAmI();
 
 	std::cout << "------------------------" << std::endl;
 	DiamondTrap dimondTrap2(dimondTrap);
@@ -38,6 +39,7 @@ int main()
 	dimondTrap2.beRepaired(3);
 	dimondTrap2.guardGate();
 	dimondTrap2.highFivesGuys();
+	dimondTrap2.whoAmI();
 
 	return 0;
 }
