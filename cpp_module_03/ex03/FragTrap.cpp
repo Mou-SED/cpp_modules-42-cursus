@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 17:27:36 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/25 14:54:41 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/25 16:09:03 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ FragTrap::FragTrap( std::string name )
 	: ClapTrap(name)
 {
 	std::cout << GREEN << "FragTrap constructor called" << RESET << std::endl;
-	this->_name = name;
 	this->_hitPoints = 100;
 	this->_energyPoints = 100;
 	this->_attackDamage = 30;

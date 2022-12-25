@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:09:23 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/25 14:54:56 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/25 16:08:35 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ ScavTrap::ScavTrap( std::string name )
 	: ClapTrap(name)
 {
 	std::cout << GREEN << "ScavTrap constructor called" << RESET << std::endl;
-	this->_name = name;
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
