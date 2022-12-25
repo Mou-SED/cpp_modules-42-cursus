@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 17:27:36 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/25 13:29:01 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/25 14:54:41 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ FragTrap::FragTrap( std::string name )
 }
 
 FragTrap::FragTrap( FragTrap const & src)
-	: ClapTrap(src._name)
+	: ClapTrap(src)
 {
 	std::cout << GREEN << "FragTrap copy constructor called" << RESET << std::endl;
 	*this = src;

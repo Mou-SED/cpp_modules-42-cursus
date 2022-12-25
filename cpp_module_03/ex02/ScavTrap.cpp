@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:09:23 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/25 13:19:15 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/25 14:54:56 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ ScavTrap::ScavTrap( std::string name )
 }
 
 ScavTrap::ScavTrap( ScavTrap const & src)
-	: ClapTrap(src._name)
+	: ClapTrap(src)
 {
 	std::cout << GREEN << "ScavTrap copy constructor called" << RESET << std::endl;
 	*this = src;
