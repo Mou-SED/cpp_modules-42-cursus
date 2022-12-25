@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:09:23 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/23 17:08:39 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/24 21:01:24 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 ScavTrap::ScavTrap( void )
 {
 	std::cout << GREEN << "ScavTrap default constructor called" << RESET << std::endl;
+	this->_name = "Default-ST";
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackDamage = 20;
+	return ;
 }
 
 ScavTrap::ScavTrap( std::string name )
@@ -24,17 +29,20 @@ ScavTrap::ScavTrap( std::string name )
 	this->_hitPoints = 100;
 	this->_energyPoints = 50;
 	this->_attackDamage = 20;
+	return ;
 }
 
 ScavTrap::ScavTrap( ScavTrap const & src)
 {
 	std::cout << GREEN << "ScavTrap copy constructor called" << RESET << std::endl;
 	*this = src;
+	return ;
 }
 
 ScavTrap::~ScavTrap( void )
 {
 	std::cout << RED << "ScavTrap destructor called" << RESET << std::endl;
+	return ;
 }
 
 ScavTrap & ScavTrap::operator=( ScavTrap const & other )
@@ -53,4 +61,5 @@ ScavTrap & ScavTrap::operator=( ScavTrap const & other )
 void	ScavTrap::guardGate( void )
 {
 	std::cout << "ScavTrap " << this->_name << " has entered in Gate keeper mode" << std::endl;
+	return ;
 }

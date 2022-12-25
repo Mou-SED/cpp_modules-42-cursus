@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 17:27:36 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/23 17:45:05 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/24 21:10:13 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 FragTrap::FragTrap( void )
 {
 	std::cout << GREEN << "FragTrap default constructor called" << RESET << std::endl;
+	this->_name = "Default FT";
+	this->_hitPoints = 100;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
+	return ;
 }
 
 FragTrap::FragTrap( std::string name )
@@ -22,19 +27,22 @@ FragTrap::FragTrap( std::string name )
 	std::cout << GREEN << "FragTrap constructor called" << RESET << std::endl;
 	this->_name = name;
 	this->_hitPoints = 100;
-	this->_energyPoints = 50;
-	this->_attackDamage = 20;
+	this->_energyPoints = 100;
+	this->_attackDamage = 30;
+	return ;
 }
 
 FragTrap::FragTrap( FragTrap const & src)
 {
 	std::cout << GREEN << "FragTrap copy constructor called" << RESET << std::endl;
 	*this = src;
+	return ;
 }
 
 FragTrap::~FragTrap( void )
 {
 	std::cout << RED << "FragTrap destructor called" << RESET << std::endl;
+	return ;
 }
 
 FragTrap & FragTrap::operator=( FragTrap const & other )
@@ -53,4 +61,5 @@ FragTrap & FragTrap::operator=( FragTrap const & other )
 void	FragTrap::highFivesGuys( void )
 {
 	std::cout << "FragTrap " << this->_name << " is giving high fives" << std::endl;
+	return ;
 }

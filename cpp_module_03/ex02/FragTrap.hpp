@@ -6,16 +6,16 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 17:18:41 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/23 17:43:58 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/24 21:08:18 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "ScavTrap.hpp"
 
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 
-class FragTrap : public ScavTrap
+#include "ScavTrap.hpp"
+
+class FragTrap : public ClapTrap
 {
 	public:
 		FragTrap( void );
