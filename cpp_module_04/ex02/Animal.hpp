@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:35:17 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/27 00:09:23 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/27 16:00:28 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@
 #define RED "\033[0;31m"
 #define RESET "\033[0m"
 
-class Animal
+class A_Animal
 {
 	protected:
 		std::string _type;
 
 	public:
-		Animal( void );
-		Animal( Animal const & src );
-		virtual ~Animal( void );
+		A_Animal( void );
+		A_Animal( A_Animal const & src );
+		virtual ~A_Animal( void );
 
-		Animal & operator=( Animal const & other );
+		A_Animal & operator=( A_Animal const & other );
 
 		virtual void	makeSound( void );
 		virtual void	makeSound( void ) const;

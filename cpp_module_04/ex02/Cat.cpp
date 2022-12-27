@@ -6,20 +6,20 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 15:37:41 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/27 13:22:44 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/27 16:02:05 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat( void ) : Animal() , _brain(new Brain())
+Cat::Cat( void ) : A_Animal() , _brain(new Brain())
 {
 	std::cout << GREEN << "Cat default constructor is called" << RESET << std::endl;
 	this->_type = std::string("Cat");
 	return ;
 }
 
-Cat::Cat( Cat const & src ) : Animal(src), _brain(new Brain())
+Cat::Cat( Cat const & src ) : A_Animal(src), _brain(new Brain())
 {
 	std::cout << GREEN << "Cat copy constructor is called" << RESET << std::endl;
 	*this = src;

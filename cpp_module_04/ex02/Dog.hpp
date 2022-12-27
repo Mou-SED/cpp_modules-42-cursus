@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:45:37 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/27 00:20:53 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/27 16:00:59 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Dog : public Animal
+class Dog : public A_Animal
 {
 	private:
 		Brain	*_brain;
