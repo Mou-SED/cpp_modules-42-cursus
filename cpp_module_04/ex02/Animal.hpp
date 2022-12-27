@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:35:17 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/27 16:00:28 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/27 16:03:29 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ class A_Animal
 
 		A_Animal & operator=( A_Animal const & other );
 
-		virtual void	makeSound( void );
-		virtual void	makeSound( void ) const;
+		virtual void	makeSound( void ) = 0;
+		virtual void	makeSound( void ) const = 0;
 		std::string getType( void ) const;
 };
 
