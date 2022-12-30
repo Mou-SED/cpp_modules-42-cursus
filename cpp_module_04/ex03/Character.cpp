@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 18:01:20 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/30 00:02:56 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/30 18:43:08 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,12 @@ Character::Character( std::string const & name ) : _name(name)
 Character::Character( Character const & src ) : _name(src._name)
 {
 	for (int i = 0; i < 4; i++)
-		this->_inventory[i] = src._inventory[i] ? src._inventory[i]->clone() : nullptr;
+	{
+		if (src._inventory[i])
+			this->_inventory[i] = src._inventory[i]->clone();
+		else
+			this->_inventory[i] = nullptr;
+	}
 	return ;
 }
 
@@ -50,15 +55,17 @@ Character & Character::operator=( Character const & other )
 {
 	if (this != &other)
 	{
-		this->_name = other._name;
 		for (int i = 0; i < 4; i++)
 		{
 			if (this->_inventory[i])
 			{
-				delete _inventory[i];
+				delete this->_inventory[i];
 				this->_inventory[i] = nullptr;
 			}
-            this->_inventory[i] = other._inventory[i] ? other._inventory[i]->clone() : nullptr;
+			if (other._inventory[i])
+				this->_inventory[i] = other._inventory[i]->clone();
+			else
+				this->_inventory[i] = nullptr;
 		}
 	}
 	return (*this);
@@ -73,9 +80,9 @@ void Character::equip( AMateria * m )
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_inventory[i] == nullptr)
+		if (!this->_inventory[i])
 		{
-			this->_inventory[i] = m;
+			this->_inventory[i] = m->clone();
 			break ;
 		}
 	}
@@ -84,8 +91,11 @@ void Character::equip( AMateria * m )
 
 void Character::unequip( int idx )
 {
-	if (idx >= 0 && idx < 4)
+	if (idx >= 0 && idx < 4 && this->_inventory[idx])
+	{
+		delete this->_inventory[idx];
 		this->_inventory[idx] = nullptr;
+	}
 	return ;
 }
 
