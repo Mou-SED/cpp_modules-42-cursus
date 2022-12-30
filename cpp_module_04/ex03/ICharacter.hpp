@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 17:36:24 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/29 20:56:18 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/29 23:00:29 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include <string>
+
+class AMateria;
 # include "AMateria.hpp"
 
 class ICharacter
