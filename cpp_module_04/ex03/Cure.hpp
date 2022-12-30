@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 17:21:23 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/29 19:57:46 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/30 19:01:13 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class Cure : public AMateria
 
 		AMateria *clone( void ) const;
 		void use( ICharacter & target );
+
+		void setType( std::string const & type ); // TODO: remove this
 };
 
 #endif

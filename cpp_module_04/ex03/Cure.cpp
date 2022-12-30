@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 17:31:46 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/29 23:35:28 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/30 19:01:18 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,10 @@ AMateria *Cure::clone( void ) const
 void Cure::use( ICharacter & target )
 {
 	if (&target)
-		std::cout << "* heals " << target.getName() << "’s wounds *" << std::endl;
+		std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+}
+
+void Cure::setType( std::string const & type ) // TODO: remove this
+{
+	this->_type = type;
 }

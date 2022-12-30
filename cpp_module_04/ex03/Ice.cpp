@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 17:23:59 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/29 23:35:30 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/30 18:59:24 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,9 @@ void Ice::use( ICharacter & target )
 {
 	if (&target)
 		std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+}
+
+void Ice::setType( std::string const & type ) // TODO: remove this
+{
+	this->_type = type;
 }
