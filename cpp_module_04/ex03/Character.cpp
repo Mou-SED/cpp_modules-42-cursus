@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 18:01:20 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/29 22:40:29 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/30 00:02:56 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,13 +85,7 @@ void Character::equip( AMateria * m )
 void Character::unequip( int idx )
 {
 	if (idx >= 0 && idx < 4)
-	{
-		AMateria *tmp = this->_inventory[idx];
 		this->_inventory[idx] = nullptr;
-
-		delete tmp;
-		tmp = nullptr;
-	}
 	return ;
 }
 
