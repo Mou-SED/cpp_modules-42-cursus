@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 17:23:59 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/29 19:48:31 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/29 23:35:30 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ AMateria *Ice::clone( void ) const
 
 void Ice::use( ICharacter & target )
 {
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+	if (&target)
+		std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
