@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 17:46:38 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/29 21:07:52 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/31 22:26:49 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ class Character : public ICharacter
 		void equip( AMateria *m );
 		void unequip( int idx );
 		void use( int idx, ICharacter & target );
+
+		void setName( std::string const & name ); // TODO: remove this
 };
 
 #endif
