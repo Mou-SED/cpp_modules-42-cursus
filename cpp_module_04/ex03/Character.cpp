@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 18:01:20 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/30 18:43:08 by moseddik         ###   ########.fr       */
+/*   Updated: 2022/12/31 22:40:44 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ Character & Character::operator=( Character const & other )
 {
 	if (this != &other)
 	{
+		this->_name = other._name;
 		for (int i = 0; i < 4; i++)
 		{
 			if (this->_inventory[i])
@@ -78,6 +79,8 @@ std::string const & Character::getName( void ) const
 
 void Character::equip( AMateria * m )
 {
+	if (!m)
+		return ;
 	for (int i = 0; i < 4; i++)
 	{
 		if (!this->_inventory[i])
@@ -103,5 +106,11 @@ void Character::use( int idx, ICharacter & target )
 {
 	if (idx >= 0 && idx < 4 && this->_inventory[idx])
 		this->_inventory[idx]->use(target);
+	return ;
+}
+
+void Character::setName( std::string const & name ) //TODO: remove this
+{
+	this->_name = name;
 	return ;
 }
