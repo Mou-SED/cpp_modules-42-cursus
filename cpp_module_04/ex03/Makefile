@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/29 22:51:55 by moseddik          #+#    #+#              #
-#    Updated: 2022/12/29 23:34:25 by moseddik         ###   ########.fr        #
+#    Updated: 2022/12/31 22:46:49 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,13 +25,13 @@ OBJ_DIR			:= obj
 
 # *********************************** Files ************************************
 NAME			:= Materia
-INC				:= AMateria.hpp Character.hpp Cure.hpp Ice.hpp ICharacter.hpp
-SRC				:= main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp
+INC				:= AMateria.hpp Character.hpp Cure.hpp Ice.hpp ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp
+SRC				:= main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 OBJ				:= $(SRC:.cpp=.o)
 
 # ****************************** Compiler Options ******************************
 CXX				:= c++
-CXXFLAGS		:= -Wall -Wextra -Werror -std=c++98 -fsanitize=address
+CXXFLAGS		:= -Wall -Wextra -Werror -std=c++98
 
 # ******************************* Other commands *******************************
 RM				:= rm -rf
