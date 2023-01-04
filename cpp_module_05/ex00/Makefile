@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 15:32:08 by moseddik          #+#    #+#              #
-#    Updated: 2023/01/04 01:40:04 by moseddik         ###   ########.fr        #
+#    Updated: 2023/01/04 15:00:55 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ OBJ				:= $(SRC:.cpp=.o)
 
 # ****************************** Compiler Options ******************************
 CXX				:= c++
-CXXFLAGS		:= -Wall -Wextra -Werror -std=c++98 -fsanitize=address
+CXXFLAGS		:= -Wall -Wextra -Werror -std=c++98
 
 # ******************************* Other commands *******************************
 RM				:= rm -rf
