@@ -6,13 +6,13 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 15:16:56 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/04 03:38:34 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/04 14:34:49 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat( void ) : _name( "Default" ), _grade( 0 )
+Bureaucrat::Bureaucrat( void ) : _name( "Default" ), _grade( 150 )
 {
 	return ;
 }
@@ -40,7 +40,7 @@ Bureaucrat::Bureaucrat( std::string name, int grade ) : _name( name )
 	catch(const std::exception& e)
 	{
 		std::cerr << RED << "Exception: " << e.what() << RESET << std::endl;
-		
+		std::cout << RED << "Your Bureaucrat has not created you must give him a Grade between 1 and 150" << RESET << std::endl;
 		exit(EXIT_FAILURE);
 	}
 	return ;
