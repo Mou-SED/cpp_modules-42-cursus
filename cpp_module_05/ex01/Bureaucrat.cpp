@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 15:16:56 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/04 23:25:45 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/04 23:47:00 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ Bureaucrat::Bureaucrat( std::string name, int grade ) : _name( name )
 		std::cerr << RED << "Exception: " << e.what() << RESET << std::endl;
 		std::cout << RED << "Your Bureaucrat: " << this->_name
 			<< " has not created you must give him a Grade between 1 and 150" << RESET << std::endl;
+		Bureaucrat::~Bureaucrat();
+		e.~exception();
 		exit(EXIT_FAILURE);
 	}
 	return ;

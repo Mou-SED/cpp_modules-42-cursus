@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 16:38:41 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/04 23:24:38 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/04 23:45:13 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ Form::Form( std::string name, int grade_to_sign, int grade_to_execute )
 		std::cerr << RED << "Form Exception: " << e.what() << RESET << std::endl;
 		std::cout << RED << "Your Form: " << this->_name << " has not created you must give him a Grade between 1 and 150" << RESET << std::endl;
 		Form::~Form();
+		e.~exception();
 		exit(EXIT_FAILURE);
 	}
 	return ;
