@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 16:38:41 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/04 22:32:14 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/04 23:24:38 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,14 @@ const char *Form::GradeTooLowException::what() const throw()
 	return "Grade is Too Low";
 }
 
-Form::Form( void ) : _name( "Default" ), _grade_to_sign( 0 ), _grade_to_execute( 0 )
+Form::Form( void ) : _name( "Default" ), _grade_to_sign( 150 ), _grade_to_execute( 150 )
 {
-	std::cout << GREEN << "Form default constructor is called" << RESET << std::endl;
 	return ;
 }
 
 Form::Form( std::string name, int grade_to_sign, int grade_to_execute )
 	: _name( name ), _grade_to_sign( grade_to_sign ), _grade_to_execute( grade_to_execute )
 {
-	std::cout << GREEN << "Form parameter constructor is called" << RESET << std::endl;
 	try
 	{
 		if (grade_to_sign < 1 || grade_to_execute < 1)
@@ -52,7 +50,6 @@ Form::Form( std::string name, int grade_to_sign, int grade_to_execute )
 Form::Form( Form const & src )
 	: _name(src._name), _grade_to_sign(src._grade_to_sign), _grade_to_execute(src._grade_to_execute)
 {
-	std::cout << GREEN << "Form copy constructor is called" << RESET << std::endl;
 	return ;
 }
 
@@ -68,7 +65,7 @@ Form & Form::operator=( Form const & other )
 
 std::ostream & operator<<( std::ostream & o, Form const & other )
 {
-	o << "{Form Name: " << other.getName() << "} {is_signed: "
+	o << "Form: {Name: " << other.getName() << "} {is_signed: "
 		<< (other.getIsSigned() ? "True" : "False")
 		<< "} {GradeToSign: " << other.getGradeToSign()
 		<< "} {GradeToExecute: " << other.getGradeToExecute()
@@ -78,7 +75,6 @@ std::ostream & operator<<( std::ostream & o, Form const & other )
 
 Form::~Form( void )
 {
-	std::cout << RED << "Form default destructor is called" << RESET << std::endl;
 	return ;
 }
 

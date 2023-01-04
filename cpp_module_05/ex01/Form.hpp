@@ -6,13 +6,14 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 15:36:32 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/04 22:03:36 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/04 23:06:43 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FORM_HPP
 #define FORM_HPP
 
+class Bureaucrat;
 #include "Bureaucrat.hpp"
 
 class Form
