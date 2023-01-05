@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 14:42:25 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/04 23:06:20 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/05 14:21:58 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 # include <iostream>
 # include <string>
 # include <exception>
-class Form;
-# include "Form.hpp"
+
+class AForm;
+# include "AForm.hpp"
 
 #define GREEN "\033[0;32m"
 #define RED "\033[0;31m"
@@ -54,7 +55,7 @@ class Bureaucrat
 				virtual const char *what() const throw();
 		};
 
-		void	signForm( Form const & form );
+		void	signForm( AForm const & form );
 };
 
 std::ostream & operator<<( std::ostream & o, Bureaucrat const & other );

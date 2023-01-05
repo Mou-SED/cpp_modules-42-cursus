@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 15:16:56 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/04 23:47:00 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/05 14:19:31 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,7 @@ std::ostream & operator<<( std::ostream & o, Bureaucrat const & other )
 	return (o);
 }
 
-void	Bureaucrat::signForm( Form const & form )
+void	Bureaucrat::signForm( AForm const & form )
 {
 	if (form.getIsSigned() == true)
 	{
@@ -131,6 +131,6 @@ void	Bureaucrat::signForm( Form const & form )
 	}
 	std::cout << RED << this->_name << " couldn't sign " << form.getName()
 		<< " because " << form.getGradeToSign() << " < " << this->getGrade()
-			<< " Thus, it does not have the required Grade of Form" << std::endl;
+			<< " Thus, it does not have the required Grade of AForm" << std::endl;
 	return ;
 }
