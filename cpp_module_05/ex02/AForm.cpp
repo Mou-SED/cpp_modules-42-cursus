@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 14:17:06 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/05 14:18:55 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/05 23:26:35 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,11 @@ const char *AForm::GradeTooHighException::what() const throw()
 const char *AForm::GradeTooLowException::what() const throw()
 {
 	return "Grade is Too Low";
+}
+
+const char *AForm::FormNotSignedException::what() const throw()
+{
+	return "Form is not signed";
 }
 
 AForm::AForm( void ) : _name( "Default" ), _grade_to_sign( 150 ), _grade_to_execute( 150 )
@@ -58,8 +63,7 @@ AForm & AForm::operator=( AForm const & other )
 {
 	if (this != &other)
 	{
-		this->~AForm();
-		new (this) AForm(other);
+		this->_is_signed = other._is_signed;
 	}
 	return (*this);
 }
