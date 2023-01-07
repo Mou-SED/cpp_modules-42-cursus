@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 15:16:56 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/05 14:19:31 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/07 13:56:12 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,5 +132,25 @@ void	Bureaucrat::signForm( AForm const & form )
 	std::cout << RED << this->_name << " couldn't sign " << form.getName()
 		<< " because " << form.getGradeToSign() << " < " << this->getGrade()
 			<< " Thus, it does not have the required Grade of AForm" << std::endl;
+	return ;
+}
+
+void	Bureaucrat::executeForm( AForm const & form )
+{
+	if (form.getIsSigned() == false)
+	{
+		std::cout << RED << this->_name << " couldn't execute " << form.getName()
+			<< " because " << form.getName() << " is not signed" << RESET << std::endl;
+		return ;
+	}
+	if (form.getGradeToExecute() < this->getGrade())
+	{
+		std::cout << RED << this->_name << " couldn't execute " << form.getName()
+			<< " because " << form.getGradeToExecute() << " < " << this->getGrade()
+				<< " Thus, it does not have the required Grade of AForm" << RESET << std::endl;
+		return ;
+	}
+	form.execute(*this);
+	std::cout << GREEN << this->_name << " executed " << form.getName() << RESET << std::endl;
 	return ;
 }
