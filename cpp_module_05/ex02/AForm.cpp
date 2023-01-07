@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 14:17:06 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/05 23:26:35 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/07 12:47:25 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,20 @@ void	AForm::beSigned( Bureaucrat const & bureaucrat )
 	{
 		std::cerr << RED << "AForm Exception: " << e.what() << RESET
 			<< " Your Grade is lower than the required grade {" << this->_grade_to_sign << "}, you must raise your Grade to sign the Aform." << std::endl;
+	}
+	return ;
+}
+
+void	AForm::execute( Bureaucrat const & executor ) const
+{
+	if (this->_is_signed == false)
+	{
+		throw FormNotSignedException();
+	}
+
+	if (executor.getGrade() > this->_grade_to_execute)
+	{
+		throw GradeTooLowException();
 	}
 	return ;
 }
