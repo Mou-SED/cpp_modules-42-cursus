@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 13:37:04 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/07 13:40:09 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/07 14:16:19 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,15 +56,7 @@ std::string const	PresidentialPardonForm::getTarget( void ) const
 
 void	PresidentialPardonForm::execute( Bureaucrat const & executor ) const
 {
-	try
-	{
-		AForm::execute(executor);
-		std::cout << BLUE << this->_target
-			<< " has been pardoned by Zafod Beeblebrox" << RESET << std::endl;
-	}
-	catch (std::exception & e)
-	{
-		std::cout << RED << "PresidentialPardonForm Exception: "
-			<< e.what() << RESET << std::endl;
-	}
+	AForm::execute(executor);
+	std::cout << BLUE << this->_target
+		<< " has been pardoned by Zafod Beeblebrox" << RESET << std::endl;
 }

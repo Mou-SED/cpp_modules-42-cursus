@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 14:17:06 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/07 12:47:25 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/07 14:33:24 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,10 @@ AForm::AForm( void ) : _name( "Default" ), _grade_to_sign( 150 ), _grade_to_exec
 AForm::AForm( std::string name, int grade_to_sign, int grade_to_execute )
 	: _name( name ), _grade_to_sign( grade_to_sign ), _grade_to_execute( grade_to_execute )
 {
-	try
-	{
-		if (grade_to_sign < 1 || grade_to_execute < 1)
-			throw GradeTooHighException();
-		if (grade_to_sign > 150 || grade_to_execute > 150)
-			throw GradeTooLowException();
-	}
-	catch (const std::exception& e)
-	{
-		std::cerr << RED << "AForm Exception: " << e.what() << RESET << std::endl;
-		std::cout << RED << "Your AForm: " << this->_name << " has not created you must give him a Grade between 1 and 150" << RESET << std::endl;
-		AForm::~AForm();
-		e.~exception();
-		exit(EXIT_FAILURE);
-	}
+	if (grade_to_sign < 1 || grade_to_execute < 1)
+		throw GradeTooHighException();
+	if (grade_to_sign > 150 || grade_to_execute > 150)
+		throw GradeTooLowException();
 	return ;
 }
 
@@ -105,17 +94,9 @@ int 				AForm::getGradeToExecute( void ) const
 
 void	AForm::beSigned( Bureaucrat const & bureaucrat )
 {
-	try
-	{
-		if (bureaucrat.getGrade() > this->_grade_to_sign)
-			throw GradeTooLowException();
-		this->_is_signed = true;
-	}
-	catch(const GradeTooLowException& e)
-	{
-		std::cerr << RED << "AForm Exception: " << e.what() << RESET
-			<< " Your Grade is lower than the required grade {" << this->_grade_to_sign << "}, you must raise your Grade to sign the Aform." << std::endl;
-	}
+	if (bureaucrat.getGrade() > this->_grade_to_sign)
+		throw GradeTooLowException();
+	this->_is_signed = true;
 	return ;
 }
 

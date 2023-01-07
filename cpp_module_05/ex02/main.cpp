@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 15:30:59 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/07 14:02:48 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/07 14:40:25 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,44 +18,65 @@
 
 int main( void )
 {
-	Bureaucrat bureaucrat("Bureaucrat", 5);
+	// Create some bureaucrat objects
+    Bureaucrat b1("Bob", 5);
+    Bureaucrat b2("Alice", 40);
+    Bureaucrat b3("Eve", 50);
 
-	ShrubberyCreationForm form("ShrubberyCreationForm");
-	RobotomyRequestForm form2("RobotomyRequestForm");
-	PresidentialPardonForm form3("PresidentialPardonForm");
+    std::cout << b1 << std::endl;
+    std::cout << b2 << std::endl;
+    std::cout << b3 << std::endl;
 
-	form.beSigned(bureaucrat);
-	form2.beSigned(bureaucrat);
-	form3.beSigned(bureaucrat);
+    // Try to increment and decrement the grades of the bureaucrats
+    try
+    {
+        b1.incrementGrade();
+        b2.decrementGrade();
+    }
+    catch (std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
 
-	std::cout << form << std::endl;
-	std::cout << form2 << std::endl;
-	std::cout << form3 << std::endl;
+    std::cout << b1 << std::endl;
+    std::cout << b2 << std::endl;
+    std::cout << b3 << std::endl;
 
-	bureaucrat.signForm(form);
-	bureaucrat.signForm(form2);
-	bureaucrat.signForm(form3);
+    // Create some form objects
+    ShrubberyCreationForm f1("Home");
+    RobotomyRequestForm f2("Robot");
+    PresidentialPardonForm f3("Criminal");
 
-	form.execute(bureaucrat);
-	form2.execute(bureaucrat);
-	form3.execute(bureaucrat);
+    std::cout << f1 << std::endl;
+    std::cout << f2 << std::endl;
+    std::cout << f3 << std::endl;
 
-	std::cout << "---------------------" << std::endl;
-	Bureaucrat bureaucrat2("Bureaucrat2", 20);
+	// Try to sign the forms
+	try
+	{
+		f1.beSigned(b1);
+		f2.beSigned(b2);
+		f3.beSigned(b3);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
-	RobotomyRequestForm form4("RobotomyRequestForm2");
-	PresidentialPardonForm form5("PresidentialPardonForm2");
+    // Try to sign and execute the forms
+    try
+    {
+        b1.signForm(f1);
+        b2.signForm(f2);
+        b3.signForm(f3);
 
-	form4.beSigned(bureaucrat2);
-	form5.beSigned(bureaucrat2);
-
-	std::cout << form4 << std::endl;
-	std::cout << form5 << std::endl;
-
-	bureaucrat2.signForm(form4);
-	bureaucrat2.signForm(form5);
-
-	bureaucrat2.executeForm(form4);
-	bureaucrat2.executeForm(form5);
+        b1.executeForm(f1);
+        b2.executeForm(f2);
+        b3.executeForm(f3);
+    }
+    catch (std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
 	return 0;
 }
