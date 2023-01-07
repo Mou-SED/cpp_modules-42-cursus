@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 15:32:08 by moseddik          #+#    #+#              #
-#    Updated: 2023/01/05 23:59:20 by moseddik         ###   ########.fr        #
+#    Updated: 2023/01/07 13:41:20 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,8 @@ OBJ_DIR			:= obj
 
 # *********************************** Files ************************************
 NAME			:= AForm
-INC				:= Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp
-SRC				:= main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp
+INC				:= Bureaucrat.hpp AForm.hpp ShrubberyCreationForm.hpp RobotomyRequestForm.hpp PresidentialPardonForm.hpp
+SRC				:= main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 OBJ				:= $(SRC:.cpp=.o)
 
 # ****************************** Compiler Options ******************************
