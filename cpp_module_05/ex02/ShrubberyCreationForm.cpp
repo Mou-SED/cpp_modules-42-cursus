@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 18:15:13 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/07 14:16:52 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/07 23:47:42 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,21 @@ const char *ShrubberyCreationForm::FileOpenException::what() const throw()
 
 ShrubberyCreationForm::ShrubberyCreationForm( void ) : AForm("ShrubberyCreationForm", 145, 137), _target("Default")
 {
-	std::cout << GREEN << "ShrubberyCreationForm default constructor called" << RESET << std::endl;
 	return ;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm( std::string target ) : AForm("ShrubberyCreationForm", 145, 137), _target(target)
 {
-	std::cout << GREEN << "ShrubberyCreationForm parametric constructor called" << RESET << std::endl;
 	return ;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm( ShrubberyCreationForm const & src ) : AForm(src), _target(src._target)
 {
-	std::cout << GREEN << "ShrubberyCreationForm copy constructor called" << RESET << std::endl;
 	return ;
 }
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator=( ShrubberyCreationForm const & other )
 {
-	std::cout << GREEN << "ShrubberyCreationForm assignation operator called" << RESET << std::endl;
 	if (this != &other)
 	{
 		AForm::operator=(other);
@@ -47,7 +43,6 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator=( ShrubberyCreationForm 
 
 ShrubberyCreationForm::~ShrubberyCreationForm( void )
 {
-	std::cout << RED << "ShrubberyCreationForm destructor called" << RESET << std::endl;
 	return ;
 }
 

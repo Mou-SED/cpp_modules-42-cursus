@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 12:33:48 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/07 14:16:33 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/07 23:46:55 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,23 @@
 RobotomyRequestForm::RobotomyRequestForm( void )
 	: AForm("RobotomyRequestForm", 72, 45), _target("Default")
 {
-	std::cout << GREEN << "RobotomyRequestForm default constructor called" << RESET << std::endl;
 	return ;
 }
 
 RobotomyRequestForm::RobotomyRequestForm( std::string target )
 	: AForm("RobotomyRequestForm", 72, 45), _target(target)
 {
-	std::cout << GREEN << "RobotomyRequestForm parametric constructor called" << RESET << std::endl;
 	return ;
 }
 
 RobotomyRequestForm::RobotomyRequestForm( RobotomyRequestForm const & src )
 	: AForm(src), _target(src._target)
 {
-	std::cout << GREEN << "RobotomyRequestForm copy constructor called" << RESET << std::endl;
 	return ;
 }
 
 RobotomyRequestForm & RobotomyRequestForm::operator=( RobotomyRequestForm const & other )
 {
-	std::cout << GREEN << "RobotomyRequestForm assignation operator called" << RESET << std::endl;
 	if (this != &other)
 	{
 		AForm::operator=(other);
@@ -45,7 +41,6 @@ RobotomyRequestForm & RobotomyRequestForm::operator=( RobotomyRequestForm const 
 
 RobotomyRequestForm::~RobotomyRequestForm( void )
 {
-	std::cout << RED << "RobotomyRequestForm destructor called" << RESET << std::endl;
 	return ;
 }
 
