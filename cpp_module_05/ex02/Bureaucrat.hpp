@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 14:42:25 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/05 14:21:58 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/07 13:39:25 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class AForm;
 
 #define GREEN "\033[0;32m"
 #define RED "\033[0;31m"
+#define BLUE "\033[0;34m"
 #define RESET "\033[0m"
 
 class Bureaucrat
