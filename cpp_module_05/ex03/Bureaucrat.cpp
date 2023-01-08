@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 15:16:56 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/07 14:15:41 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/08 15:56:04 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,17 +96,19 @@ std::ostream & operator<<( std::ostream & o, Bureaucrat const & other )
 	return (o);
 }
 
-void	Bureaucrat::signForm( AForm const & form )
+void	Bureaucrat::signForm( AForm & form )
 {
-	if (form.getIsSigned() == true)
+	try
 	{
-		std::cout << GREEN << this->_name << " signed " << form.getName()
+		form.beSigned(*this);
+		std::cout << GREEN << this->getName() << " signed " << form.getName()
 			<< RESET << std::endl;
-		return ;
 	}
-	std::cout << RED << this->_name << " couldn't sign " << form.getName()
-		<< " because " << form.getGradeToSign() << " < " << this->getGrade()
-			<< " Thus, it does not have the required Grade of AForm" << std::endl;
+	catch(const std::exception& e)
+	{
+		std::cerr << this->getName() << " couldn't sign " << form.getName()
+			<< " because " << RED << e.what() << RESET << std::endl;
+	}
 	return ;
 }
 

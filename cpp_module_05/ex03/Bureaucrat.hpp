@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 14:42:25 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/07 13:54:27 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/08 15:56:13 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ class Bureaucrat
 				virtual const char *what() const throw();
 		};
 
-		void	signForm( AForm const & form );
+		void	signForm( AForm & form );
 		void	executeForm( AForm const & form );
 };
 

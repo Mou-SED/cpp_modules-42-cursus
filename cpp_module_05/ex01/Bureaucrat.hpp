@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 14:42:25 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/04 23:06:20 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/08 14:56:30 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ class Bureaucrat
 				virtual const char *what() const throw();
 		};
 
-		void	signForm( Form const & form );
+		void	signForm( Form & form );
 };
 
 std::ostream & operator<<( std::ostream & o, Bureaucrat const & other );
