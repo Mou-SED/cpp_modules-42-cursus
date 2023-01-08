@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 15:16:56 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/08 15:56:04 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/08 19:48:01 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,7 @@ Bureaucrat & Bureaucrat::operator=( Bureaucrat const & other )
 {
 	if (this != &other)
 	{
-		this->~Bureaucrat();
-		new (this) Bureaucrat(other);
+		_grade = other._grade;
 	}
 	return (*this);
 }

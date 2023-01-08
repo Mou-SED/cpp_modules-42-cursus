@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 16:38:41 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/07 14:14:35 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/08 19:48:43 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ Form & Form::operator=( Form const & other )
 {
 	if (this != &other)
 	{
-		this->~Form();
-		new (this) Form(other);
+		_is_signed = other._is_signed;
 	}
 	return (*this);
 }
