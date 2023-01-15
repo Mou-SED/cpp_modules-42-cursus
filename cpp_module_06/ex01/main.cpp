@@ -6,37 +6,40 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 02:16:56 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/15 02:52:17 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/15 02:58:36 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Data.hpp"
 
-int	main( void )
+int main( void )
 {
-	Data*	data = new(std::nothrow) Data;
-	if (data == nullptr)
-	{
-		std::cout << "Error: Failed to allocate memory for Data object" << std::endl;
-		return 1;
-	}
-	data->s1 = "Hello";
-	data->n = 42;
-	data->s2 = "World";
+    Data* data = new Data;
+    data->s1 = "Hello";
+    data->n = 42;
+    data->s2 = "World";
 
-	std::cout << "Before serialization:" << std::endl;
-	std::cout << "s1: " << data->s1 << std::endl;
-	std::cout << "n: " << data->n << std::endl;
-	std::cout << "s2: " << data->s2 << std::endl;
+    std::cout << "Before serialization:" << std::endl;
+    std::cout << "s1: " << data->s1 << std::endl;
+    std::cout << "n: " << data->n << std::endl;
+    std::cout << "s2: " << data->s2 << std::endl;
 
-	uintptr_t	serialized = serialize(data);
-	Data*		deserialized = deserialize(serialized);
+    uintptr_t serialized = serialize(data);
+    std::cout << "Serialized value: " << serialized << std::endl;
 
-	std::cout << "After serialization:" << std::endl;
-	std::cout << "s1: " << deserialized->s1 << std::endl;
-	std::cout << "n: " << deserialized->n << std::endl;
-	std::cout << "s2: " << deserialized->s2 << std::endl;
+    Data* deserialized = deserialize(serialized);
 
-	delete data;
-	return (0);
+    std::cout << "After deserialization:" << std::endl;
+    std::cout << "s1: " << deserialized->s1 << std::endl;
+    std::cout << "n: " << deserialized->n << std::endl;
+    std::cout << "s2: " << deserialized->s2 << std::endl;
+
+    // Compare the original pointer with the deserialized pointer
+    if(data == deserialized)
+        std::cout << "Deserialization successful" << std::endl;
+    else
+        std::cout << "Deserialization failed" << std::endl;
+
+    delete data;
+    return 0;
 }
