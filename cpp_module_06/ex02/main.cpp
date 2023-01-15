@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 03:31:48 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/15 04:05:54 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/15 04:15:10 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,16 @@ void	identify( Base * p )
 {
 	if (dynamic_cast<A*>(p))
 		std::cout << "A" << std::endl;
-	else if (dynamic_cast<B*>(p))
+	else
+		std::cout << "Not A" << std::endl;
+	if (dynamic_cast<B*>(p))
 		std::cout << "B" << std::endl;
-	else if (dynamic_cast<C*>(p))
+	else
+		std::cout << "Not B" << std::endl;
+	if (dynamic_cast<C*>(p))
 		std::cout << "C" << std::endl;
+	else
+		std::cout << "Not C" << std::endl;
 
 	return ;
 }
@@ -49,19 +55,19 @@ void	identify( Base & p )
         A& a = dynamic_cast<A&>(p);
         std::cout << "A" << std::endl;
     }
-	catch (std::bad_cast const & e) {}
+	catch (std::bad_cast const & e) { std::cerr << e.what() << std::endl; }
     try
 	{
         B& b = dynamic_cast<B&>(p);
         std::cout << "B" << std::endl;
     }
-	catch (std::bad_cast const & e) {}
+	catch (std::bad_cast const & e) { std::cerr << e.what() << std::endl; }
     try
 	{
         C& c = dynamic_cast<C&>(p);
         std::cout << "C" << std::endl;
     }
-	catch (std::bad_cast const & e) {}
+	catch (std::bad_cast const & e) { std::cerr << e.what() << std::endl; }
 
 	return ;
 }
