@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 03:31:48 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/15 03:53:29 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/15 04:05:54 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 #include "B.hpp"
 #include "C.hpp"
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <exception>
 
 Base*	generate( void )
 {
