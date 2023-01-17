@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:06:19 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/17 19:18:58 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/17 19:25:49 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ class Array
 			{
 				_array = new T[_size];
 				for (unsigned int i = 0; i < _size; i++)
-					_array[i] = src._array[i];
+					_array[i] = T(src._array[i]);
 			}
 			catch(const std::bad_alloc& e)
 			{
@@ -63,7 +63,7 @@ class Array
 					delete [] _array;
 					_array = new T[_size];
 					for (unsigned int i = 0; i < _size; i++)
-						_array[i] = other._array[i];
+						_array[i] = T(other._array[i]);
 				}
 				catch(const std::bad_alloc& e)
 				{
