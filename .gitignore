@@ -21,6 +21,7 @@
 *serialization
 *Identify
 *whatever
+*iter
 # Prerequisites
 *.d
 
