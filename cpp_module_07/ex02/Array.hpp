@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:06:19 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/17 19:11:34 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/01/17 19:18:58 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ class Array
 			{
 				_array = nullptr;
 				_size = 0;
-				std::cerr << e.what() << std::endl;
+				std::cerr << "Exception: " << e.what() << std::endl;
 			}
 		}
 
@@ -69,7 +69,7 @@ class Array
 				{
 					_array = nullptr;
 					_size = 0;
-					std::cerr << e.what() << std::endl;
+					std::cerr << "Exception: " << e.what() << std::endl;
 				}
 			}
 			return *this;
