@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:51:20 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/07 22:26:10 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/03 18:42:50 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,6 @@ int main(int ac, char **av)
 	std::string rep_line;
 	std::string new_file = filename + ".replace";
 
-	if (s1 == "")
-	{
-		std::cout << RED << "Error :( s1 is empty" << std::endl;
-		exit(EXIT_FAILURE);
-	}
 	fin.open(filename, std::ios::in);
 	if (!fin.is_open())
 	{
@@ -51,6 +46,11 @@ int main(int ac, char **av)
 	{
 		std::cout << RED << "Error :( Can't create file" << std::endl;
 		(fin.close(), exit(EXIT_FAILURE));
+	}
+	if (s1 == "")
+	{
+		std::cout << RED << "Error :( s1 is empty" << std::endl;
+		exit(EXIT_FAILURE);
 	}
 	while(std::getline(fin, line))
 	{
