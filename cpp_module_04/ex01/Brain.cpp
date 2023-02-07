@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 18:58:29 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/27 13:43:06 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/07 11:56:19 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 Brain::Brain( void )
 {
 	std::cout << GREEN << "Brain default constructor is called" << RESET << std::endl;
-	for ( std::string & idea : this->_ideas )
-		idea = "";
+	for ( int i = 0; i < 100; i++ )
+		this->_ideas[i] = "";
 	return ;
 }
 
