@@ -6,17 +6,17 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:45:37 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/27 16:00:59 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:08:57 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 #define DOG_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Dog : public A_Animal
+class Dog : public AAnimal
 {
 	private:
 		Brain	*_brain;

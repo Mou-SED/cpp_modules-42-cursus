@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   A_Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,30 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-A_Animal::A_Animal( void )
+AAnimal::AAnimal( void )
 {
-	std::cout << GREEN << "A_Animal default constructor is called" << RESET << std::endl;
+	std::cout << GREEN << "AAnimal default constructor is called" << RESET << std::endl;
 	return ;
 }
 
-A_Animal::A_Animal( A_Animal const & src )
+AAnimal::AAnimal( AAnimal const & src )
 {
-	std::cout << GREEN << "A_Animal copy constructor is called" << RESET << std::endl;
+	std::cout << GREEN << "AAnimal copy constructor is called" << RESET << std::endl;
 	*this = src;
 	return ;
 }
 
-A_Animal::~A_Animal( void )
+AAnimal::~AAnimal( void )
 {
-	std::cout << RED << "A_Animal destructor is called" << RESET << std::endl;
+	std::cout << RED << "AAnimal destructor is called" << RESET << std::endl;
 	return ;
 }
 
-A_Animal & A_Animal::operator=( A_Animal const & other )
+AAnimal & AAnimal::operator=( AAnimal const & other )
 {
-	std::cout << GREEN << "A_Animal assignation operator called" << RESET << std::endl;
+	std::cout << GREEN << "AAnimal assignation operator called" << RESET << std::endl;
 	if (this != &other)
 	{
 		this->_type = other._type;
@@ -41,7 +41,7 @@ A_Animal & A_Animal::operator=( A_Animal const & other )
 	return (*this);
 }
 
-std::string	A_Animal::getType( void ) const
+std::string	AAnimal::getType( void ) const
 {
 	return (this->_type);
 }

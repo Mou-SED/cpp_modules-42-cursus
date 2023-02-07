@@ -6,18 +6,18 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:34:41 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/27 16:07:19 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:46:50 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "Brain.hpp"
 
 int main( void )
 {
-	A_Animal **animals = new(std::nothrow) A_Animal*[4];
+	AAnimal **animals = new(std::nothrow) AAnimal*[4];
 	if (animals == NULL)
 	{
 		std::cout << "Allocation failed" << std::endl;
@@ -67,6 +67,6 @@ int main( void )
 
 // int main()
 // {
-// 	A_Animal animal; // abstract class can't be instantiated
+// 	AAnimal animal; // abstract class can't be instantiated
 // 	return 0;
 // }

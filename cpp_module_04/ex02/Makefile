@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/26 15:56:20 by moseddik          #+#    #+#              #
-#    Updated: 2022/12/27 14:50:50 by moseddik         ###   ########.fr        #
+#    Updated: 2023/02/07 15:48:40 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,8 @@ OBJ_DIR			:= obj
 
 # *********************************** Files ************************************
 NAME			:= Brain
-INC				:= Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
-SRC				:= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+INC				:= AAnimal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
+SRC				:= main.cpp AAnimal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 OBJ				:= $(SRC:.cpp=.o)
 
 # ****************************** Compiler Options ******************************

@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:35:17 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/27 16:03:29 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/07 15:08:42 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef AANIMAL_HPP
+# define AANIMAL_HPP
 
 #include <iostream>
 #define GREEN "\033[0;32m"
 #define RED "\033[0;31m"
 #define RESET "\033[0m"
 
-class A_Animal
+class AAnimal
 {
 	protected:
 		std::string _type;
 
 	public:
-		A_Animal( void );
-		A_Animal( A_Animal const & src );
-		virtual ~A_Animal( void );
+		AAnimal( void );
+		AAnimal( AAnimal const & src );
+		virtual ~AAnimal( void );
 
-		A_Animal & operator=( A_Animal const & other );
+		AAnimal & operator=( AAnimal const & other );
 
 		virtual void	makeSound( void ) = 0;
 		virtual void	makeSound( void ) const = 0;
