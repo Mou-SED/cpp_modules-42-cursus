@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 17:31:46 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/30 19:01:18 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/07 16:11:01 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void Cure::use( ICharacter & target )
 		std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
 
-void Cure::setType( std::string const & type ) // TODO: remove this
+void Cure::setType( std::string const & type )
 {
 	this->_type = type;
 }

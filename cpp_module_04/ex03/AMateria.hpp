@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 23:27:51 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/30 19:01:05 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/07 16:10:37 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class AMateria
 
 		virtual AMateria *clone( void ) const = 0;
 		virtual void use( ICharacter & target );
-		virtual void setType( std::string const & type ) = 0; // TODO: remove this
+		virtual void setType( std::string const & type ) = 0;
 };
 
 #endif

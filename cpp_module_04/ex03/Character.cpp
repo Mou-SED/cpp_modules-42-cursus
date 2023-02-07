@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 18:01:20 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/31 22:40:44 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/07 16:10:44 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void Character::use( int idx, ICharacter & target )
 	return ;
 }
 
-void Character::setName( std::string const & name ) //TODO: remove this
+void Character::setName( std::string const & name )
 {
 	this->_name = name;
 	return ;

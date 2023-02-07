@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 17:36:24 by moseddik          #+#    #+#             */
-/*   Updated: 2022/12/31 22:27:04 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/07 16:11:15 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class ICharacter
 		virtual void equip( AMateria *m ) = 0;
 		virtual void unequip( int idx ) = 0;
 		virtual void use( int idx, ICharacter & target ) = 0;
-		virtual void setName( std::string const & name ) = 0; // TODO: remove this
+		virtual void setName( std::string const & name ) = 0;
 };
 
 #endif
