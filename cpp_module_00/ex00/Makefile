@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 15:15:20 by moseddik          #+#    #+#              #
-#    Updated: 2022/11/18 17:26:15 by moseddik         ###   ########.fr        #
+#    Updated: 2023/02/08 17:37:27 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ $(NAME): $(OBJ_DEP)
 $(OBJ_DIR)/%.o:%.cpp
 	@$(MKDIR) $(OBJ_DIR)
 	@echo "$(GREEN)Compiling	$(YELLOW)$(shell basename $<)$(NC)"
-	@$(CXX) $(CFLAGS) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	@echo "$(RED)Removing	$(YELLOW)Object files$(NC)"
