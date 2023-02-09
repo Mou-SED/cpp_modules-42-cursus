@@ -40,7 +40,7 @@ class Convert
 		void		parsing( std::string const & input );
 		void		convChar( std::string const & input );
 		void		convInt( std::string const & input );
-		void		convFloat( std::string const & input );
+		void		convFloat( std::string & input );
 		void		convDouble( std::string const & input );
 
 	private:

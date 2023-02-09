@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 01:38:32 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/15 01:55:28 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/09 22:45:00 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ void	Convert::convInt( std::string const & input )
 	std::stringstream ss(input);
 	int myInt;
 	ss >> myInt;
+	ss.str();
 
-	if (ss.fail() || input.find("."))
+	if (ss.fail())
 	{
-		std::cout << "Please fill a valid Int or float or double or char" << std::endl;
+		std::cerr << "Unkown Type !!!" << std::endl;
 		return ;
 	}
 	if (myInt >= 0 && myInt <= 31)
@@ -28,7 +29,7 @@ void	Convert::convInt( std::string const & input )
 	else if (myInt < 0 || myInt > 127)
 		std::cout << "char: Non Ascii" << std::endl;
 	else
-		std::cout << "char: " << static_cast<char>(myInt) << std::endl;
+		std::cout << "char: '" << static_cast<char>(myInt) << "'" << std::endl;
 	std::cout << "int: " << myInt << std::endl;
 	std::cout << "float: " << static_cast<float>(myInt) << ".0f" << std::endl;
 	std::cout << "double: " << static_cast<double>(myInt) << ".0" << std::endl;

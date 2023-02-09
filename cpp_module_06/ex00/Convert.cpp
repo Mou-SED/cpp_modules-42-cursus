@@ -46,62 +46,29 @@ Convert::LiteralType	Convert::getLiteralType( void ) const
 	return (this->_literalType);
 }
 
-static bool isValidDouble( std::string const & input )
-{
-    bool hasDot = false;
-    for (char c : input) {
-        if (c == '.')
-		{
-            if (hasDot)
-                return false;
-            else
-                hasDot = true;
-        }
-		else if (!(c >= '0' && c <= '9') && !(c == '+' || c == '-'))
-            return false;
-    }
-    return true;
-}
-
-static bool isValidFloat( std::string const & input )
-{
-    bool hasDot = false;
-    for (char c : input)
-	{
-        if (c == '.')
-		{
-            if (hasDot)
-                return false;
-            else
-                hasDot = true;
-        }
-		else if (!(c >= '0' && c <= '9')
-					&& !(c == '+' || c == '-') && !(input.back() == 'f'))
-            return false;
-    }
-    return true;
-}
-
 void	Convert::parsing( std::string const & input )
 {
-	if (input.length() == 1 && !(input.front() <= '9' && input.front() >= '0'))
+	if (input.size() == 1)
 		this->setLiteralType(Convert::CHAR);
-	else if ((input.find("+inff") != std::string::npos || input.find("-inff") != std::string::npos)
-			&& input.length() == 5)
-		this->setLiteralType(Convert::FLOAT);
-	else if ((input.find("+inf") != std::string::npos || input.find("-inf") != std::string::npos)
-			&& input.length() == 4)
-		this->setLiteralType(Convert::DOUBLE);
-	else if (input.find("nan") != std::string::npos && input.length() == 3)
-		this->setLiteralType(Convert::DOUBLE);
-	else if (input.find("nanf") != std::string::npos && input.length() == 4)
-		this->setLiteralType(Convert::FLOAT);
-	else if (isValidDouble(input))
-		this->setLiteralType(Convert::DOUBLE);
-	else if (isValidFloat(input))
-		this->setLiteralType(Convert::FLOAT);
+	else if (input == "+inf" || input == "-inf" || input == "+inff" || input == "-inff" || input == "nan" || input == "nanf")
+	{
+		std::cout << "char: " << "impossible" << std::endl;
+		std::cout << "int: " << "impossible" << std::endl;
+		std::cout << "float: " << input << std::endl;
+		std::cout << "double: " << input << std::endl;
+		return ;
+	}
+	else if (input.find(".") != std::string::npos)
+	{
+		if (input.find("f") != std::string::npos)
+			this->setLiteralType(Convert::FLOAT);
+		else
+			this->setLiteralType(Convert::DOUBLE);
+	}
 	else
+	{
 		this->setLiteralType(Convert::INTEGER);
+	}
 
 	return ;
 }
