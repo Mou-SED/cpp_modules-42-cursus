@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 03:31:48 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/15 04:15:10 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/10 17:21:59 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,18 +53,21 @@ void	identify( Base & p )
     try
 	{
         A& a = dynamic_cast<A&>(p);
+        (void)a;
         std::cout << "A" << std::endl;
     }
 	catch (std::bad_cast const & e) { std::cerr << e.what() << std::endl; }
     try
 	{
         B& b = dynamic_cast<B&>(p);
+		(void)b;
         std::cout << "B" << std::endl;
     }
 	catch (std::bad_cast const & e) { std::cerr << e.what() << std::endl; }
     try
 	{
         C& c = dynamic_cast<C&>(p);
+		(void)c;
         std::cout << "C" << std::endl;
     }
 	catch (std::bad_cast const & e) { std::cerr << e.what() << std::endl; }
