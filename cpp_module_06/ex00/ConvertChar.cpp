@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ConvertChar.cpp                                    :+:      :+:    :+:   */
+/*   ScalarConverterChar.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Convert.hpp"
+#include "ScalarConverter.hpp"
 
-void	Convert::convChar( std::string const & input )
+void	ScalarConverter::convChar( std::string const & input )
 {
 	char myChar;
 	myChar = input[0];

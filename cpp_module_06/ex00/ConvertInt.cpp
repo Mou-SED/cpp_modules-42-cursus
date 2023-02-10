@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ConvertInt.cpp                                     :+:      :+:    :+:   */
+/*   ScalarConverterInt.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Convert.hpp"
+#include "ScalarConverter.hpp"
 
-void	Convert::convInt( std::string const & input )
+void	ScalarConverter::convInt( std::string const & input )
 {
 	std::stringstream ss(input);
 	int myInt;

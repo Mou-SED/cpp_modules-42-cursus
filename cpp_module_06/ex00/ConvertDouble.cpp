@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ConvertDouble.cpp                                  :+:      :+:    :+:   */
+/*   ScalarConverterDouble.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Convert.hpp"
+#include "ScalarConverter.hpp"
 
-void	Convert::convDouble( std::string const & input )
+void	ScalarConverter::convDouble( std::string const & input )
 {
 	std::stringstream ss(input);
 	double myDouble;

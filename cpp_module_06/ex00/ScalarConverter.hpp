@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Convert.hpp                                 :+:      :+:    :+:   */
+/*   ScalarConverter.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,21 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef Convert_HPP
-# define Convert_HPP
+#ifndef ScalarConverter_HPP
+# define ScalarConverter_HPP
 
 #include <sstream>
 #include <iostream>
 #include <string>
 
-class Convert
+class ScalarConverter
 {
 	public:
-		Convert( void );
-		Convert( Convert const & src );
-		~Convert( void );
+		ScalarConverter( void );
+		ScalarConverter( ScalarConverter const & src );
+		~ScalarConverter( void );
 
-		Convert &	operator=( Convert const & other );
+		ScalarConverter &	operator=( ScalarConverter const & other );
 
 		enum LiteralType {
 			INTEGER,
@@ -34,18 +34,21 @@ class Convert
 			UNKNOWN
 		};
 
-		void		setLiteralType(LiteralType type);
-		LiteralType	getLiteralType( void ) const;
+		static void		setLiteralType( LiteralType type );
+		static LiteralType	getLiteralType( void );
 
-		void		parsing( std::string const & input );
-		void		convChar( std::string const & input );
-		void		convInt( std::string const & input );
-		void		convFloat( std::string & input );
-		void		convDouble( std::string const & input );
+		static void		convert( std::string & input );
+		static void		convChar( std::string const & input );
+		static void		convInt( std::string const & input );
+		static void		convFloat( std::string & input );
+		static void		convDouble( std::string const & input );
 
 	private:
-		LiteralType	_literalType;
+		static LiteralType	_literalType;
 
 };
+
+bool	check_input( std::string &str );
+void	parsing( std::string const & input );
 
 #endif

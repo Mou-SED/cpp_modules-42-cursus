@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ConvertFloat.cpp                                   :+:      :+:    :+:   */
+/*   ScalarConverterFloat.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Convert.hpp"
+#include "ScalarConverter.hpp"
 
-void	Convert::convFloat( std::string & input )
+void	ScalarConverter::convFloat( std::string & input )
 {
 	input.erase(input.size() - 1);
 	std::stringstream ss(input);
