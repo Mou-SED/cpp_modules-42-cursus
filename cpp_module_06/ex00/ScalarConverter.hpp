@@ -20,8 +20,6 @@
 class ScalarConverter
 {
 	public:
-		ScalarConverter( void );
-		ScalarConverter( ScalarConverter const & src );
 		~ScalarConverter( void );
 
 		ScalarConverter &	operator=( ScalarConverter const & other );
@@ -44,6 +42,8 @@ class ScalarConverter
 		static void		convDouble( std::string const & input );
 
 	private:
+		ScalarConverter( void );
+		ScalarConverter( ScalarConverter const & src );
 		static LiteralType	_literalType;
 
 };
