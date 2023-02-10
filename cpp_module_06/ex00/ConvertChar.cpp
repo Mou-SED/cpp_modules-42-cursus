@@ -17,13 +17,13 @@ void	ScalarConverter::convChar( std::string const & input )
 	char myChar;
 	myChar = input[0];
 
-	int checkPrint = myChar - 48;
+	int checkPrint = myChar;
 	if (checkPrint >= 0 && checkPrint <= 31)
 		std::cout << "char: Non displayable" << std::endl;
 	else if (checkPrint < 0 || checkPrint > 127)
 		std::cout << "char: Non Ascii" << std::endl;
 	else
-		std::cout << "char: " << "'" << checkPrint << "'" << std::endl;
+		std::cout << "char: " << "'" << myChar << "'" << std::endl;
 	std::cout << "int: " << static_cast<int>(checkPrint) << std::endl;
 	std::cout << "float: " << static_cast<float>(checkPrint) << ".0f" << std::endl;
 	std::cout << "double: " << static_cast<double>(checkPrint) << ".0" << std::endl;
