@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/11 18:09:36 by moseddik          #+#    #+#              #
-#    Updated: 2023/02/08 17:37:26 by moseddik         ###   ########.fr        #
+#    Updated: 2023/02/10 15:51:30 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,8 +25,8 @@ OBJ_DIR			:= obj
 
 # *********************************** Files ************************************
 NAME			:= convert
-INC				:= Convert.hpp
-SRC				:= main.cpp Convert.cpp ConvertChar.cpp ConvertInt.cpp ConvertFloat.cpp ConvertDouble.cpp
+INC				:= ScalarConverter.hpp
+SRC				:= main.cpp ScalarConverter.cpp ConvertChar.cpp ConvertInt.cpp ConvertFloat.cpp ConvertDouble.cpp
 OBJ				:= $(SRC:.cpp=.o)
 
 # ****************************** Compiler Options ******************************
