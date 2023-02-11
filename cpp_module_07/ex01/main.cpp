@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 14:01:24 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/17 01:46:13 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/11 14:55:30 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static void	addTowInts( int & a )
 template< typename T >
 static void	printElements( T *input, size_t len )
 {
-    for ( int i = 0; i < len; ++i)
+    for ( size_t i = 0; i < len; ++i)
 	{
 		std::cout << input[i] << " ";
 		if (i == len - 1)
@@ -41,16 +41,14 @@ static void	printElements( T *input, size_t len )
 
 int main( void )
 {
-	std::size_t		strLen = 5;
-    std::string	str[strLen] = {"G1", "G2", "G3", "G4", "G5"};
+    std::string	str[5] = {"G1", "G2", "G3", "G4", "G5"};
 
-	int arrLen = 6;
-	int arr[arrLen] = {1, 2, 3, 4, 5, 6};
+	int arr[6] = {1, 2, 3, 4, 5, 6};
 
-    iter( str, strLen, printStrings );
-    iter( arr, arrLen, addTowInts );
+    iter( str, 5, printStrings );
+    iter( arr, 6, addTowInts );
 
-	printElements( str, strLen );
-	printElements( arr, arrLen );
+	printElements( str, 5 );
+	printElements( arr, 6 );
     return 0;
 }
