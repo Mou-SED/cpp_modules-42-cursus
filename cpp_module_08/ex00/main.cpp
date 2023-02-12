@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:57:58 by moseddik          #+#    #+#             */
-/*   Updated: 2023/02/12 11:32:10 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/12 11:35:31 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ int main(void)
 	try
 	{
 		find = easyfind( vec, find );
-		std::cout << GREEN << "Number : " << find << " founded" << RESET << std::endl;
+		std::cout << "Number : " << GREEN << find << " founded" << RESET << std::endl;
 	}
 	catch(int const & num)
 	{
-		std::cerr << RED << "Number Not Found!" << RESET << std::endl;
+		std::cerr << RED << "Execption : Number Not Found!" << RESET << std::endl;
 		return -1;
 	}
 
