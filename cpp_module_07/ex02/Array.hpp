@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:06:19 by moseddik          #+#    #+#             */
-/*   Updated: 2023/01/17 19:25:49 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/12 11:17:34 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ class Array
 		T & operator[]( unsigned int index )
 		{
 			if (index >= _size)
-				throw std::runtime_error("index is out of bounds");
+				throw std::out_of_range("index is out of bounds");
 			return _array[index];
 		}
 
