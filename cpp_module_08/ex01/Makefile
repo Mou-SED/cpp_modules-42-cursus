@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/12 11:39:15 by moseddik          #+#    #+#              #
-#    Updated: 2023/02/12 11:39:38 by moseddik         ###   ########.fr        #
+#    Updated: 2023/02/13 17:56:08 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ OBJ_DIR			:= obj
 
 # *********************************** Files ************************************
 NAME			:= Span
-INC				:= Span.hpp
+INC				:= Span.hpp Span.tpp
 SRC				:= main.cpp Span.cpp
 OBJ				:= $(SRC:.cpp=.o)
 
