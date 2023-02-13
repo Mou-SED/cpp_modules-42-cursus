@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:59:22 by moseddik          #+#    #+#             */
-/*   Updated: 2023/02/12 11:32:15 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:38:22 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 template< typename T >
 int	easyfind( T & container, int const & find )
 {
-	std::vector<int>::iterator it = std::find(container.begin(), container.end(), find);
+	typename T::iterator it = std::find(container.begin(), container.end(), find);
     if (it != container.end())
         return *it;
 	throw 404;
