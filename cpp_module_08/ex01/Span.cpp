@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 11:39:59 by moseddik          #+#    #+#             */
-/*   Updated: 2023/02/12 23:07:53 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/13 17:59:04 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,28 +79,6 @@ int		Span::longestSpan( void )
 	int maxSpan = vec[vec.size() - 1] - vec[0];
     return maxSpan;
 	return 0;
-}
-
-void	Span::addNumbers( std::vector<int>::iterator begin, std::vector<int>::iterator end )
-{
-	while (begin != end)
-	{
-		this->addNumber(*begin);
-		begin++;
-	}
-
-	return ;
-}
-
-void	Span::show( std::vector<int>::iterator begin, std::vector<int>::iterator end )
-{
-	while (begin != end)
-	{
-		std::cout << *begin << std::endl;
-		begin++;
-	}
-
-	return ;
 }
 
 std::vector<int>	Span::getVec( void ) const
