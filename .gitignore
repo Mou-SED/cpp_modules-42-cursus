@@ -25,6 +25,7 @@
 *array
 *easyfind
 *Span
+*mutantStack
 # Prerequisites
 *.d
 
