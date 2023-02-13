@@ -24,6 +24,7 @@
 *iter
 *array
 *easyfind
+*Span
 # Prerequisites
 *.d
 
