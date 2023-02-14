@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 11:59:09 by moseddik          #+#    #+#             */
-/*   Updated: 2023/02/13 15:18:24 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/14 12:54:18 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@
 #include <string>
 #include <algorithm>
 #include <stack>
+#include <deque>
 
-template< typename T >
-class MutantStack : public std::stack<T>
+template< typename T , typename C = std::deque<T> >
+class MutantStack : public std::stack< T, C >
 {
 	public:
 		MutantStack( void ) {};
