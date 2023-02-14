@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 11:59:09 by moseddik          #+#    #+#             */
-/*   Updated: 2023/02/14 12:54:18 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:38:06 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,24 +24,24 @@ class MutantStack : public std::stack< T, C >
 {
 	public:
 		MutantStack( void ) {};
-		MutantStack( MutantStack const & src ) : std::stack<T>(src) {};
+		MutantStack( MutantStack const & src ) : std::stack< T, C >(src) {};
 		~MutantStack( void ) {};
 
 		MutantStack const & operator=( MutantStack const & other )
 		{
-			std::stack<T>::operator=(other);
+			std::stack< T, C >::operator=(other);
 			return (*this);
 		};
 
-		typedef typename std::stack<T>::container_type::iterator iterator;
+		typedef typename std::stack< T, C >::container_type::iterator iterator;
 
 		iterator	begin( void )
 		{
-			return (std::stack<T>::c.begin());
+			return (std::stack< T, C >::c.begin());
 		};
 		iterator	end( void )
 		{
-			return (std::stack<T>::c.end());
+			return (std::stack< T, C >::c.end());
 		};
 
 };
