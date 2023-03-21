@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:31:52 by moseddik          #+#    #+#             */
-/*   Updated: 2023/03/21 18:34:36 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/03/21 20:42:38 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main( int ac, char **av )
 {
 	if ( ac != 2 )
 	{
-		std::cout << "Invalid arguments!" << std::endl;
+		std::cerr << RED << "Invalid arguments!" << RESET << std::endl;
 		return 1;
 	}
 	std::string input = av[1];
@@ -25,10 +25,18 @@ int main( int ac, char **av )
 
 	if ( check_format( input ) == false )
 	{
-		std::cout << "Error : RPN Format is invalid!" << std::endl;
+		std::cerr << RED << "Error : RPN Format is invalid!" << RESET << std::endl;
 		return 1;
 	}
 
-	std::cout << "Result: " << calculate( input ) << std::endl;
+	try
+	{
+		std::cout << "Result: " << GREEN << calculate( input ) << RESET << std::endl;
+	}
+	catch( int const & num )
+	{
+		if ( num == 404 )
+			std::cerr << RED << "Exception : You can not Divide by zero!" << RESET << std::endl;
+	}
 	return 0;
 }

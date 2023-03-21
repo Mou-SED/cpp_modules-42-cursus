@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:32:58 by moseddik          #+#    #+#             */
-/*   Updated: 2023/03/21 18:33:38 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/03/21 21:20:59 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,16 +56,20 @@ int	calculate( std::string & input )
 	int res = 0;
 	std::string operators = "*/+-";
 	std::stack<int> myStack;
-
-	for ( size_t i = 0; i <= input.size(); ++i )
+	size_t i;
+	while (!input.empty())
 	{
-		size_t iOperator = input.find_first_of(operators);
-		if ( myStack.size() )
 		i = 0;
+		size_t iOperator = input.find_first_of(operators);
 		while ( i < iOperator )
 		{
 			myStack.push(input[i] - 48);
 			i++;
+		}
+		if (myStack.size() <= 1 and iOperator != std::string::npos)
+		{
+			std::cerr << RED << "Error : RPN Format is invalid!" << RESET << std::endl;
+			exit(1);
 		}
 		int num1 = myStack.top();
 		myStack.pop();
@@ -77,6 +81,8 @@ int	calculate( std::string & input )
         		res = num2 * num1;
 				break;
 			case DIVIDE:
+				if (num1 == 0)
+					throw 404;
 				res = num2 / num1;
 				break;
 			case ADD:
@@ -90,9 +96,15 @@ int	calculate( std::string & input )
 		input = input.substr(iOperator + 1);
 		if ( isdigit(input.front()) and myStack.size() > 1 )
 		{
-			std::cout << "Error : RPN Format is invalid!" << std::endl;
+			std::cerr << RED << "Error : RPN Format is invalid!" << RESET << std::endl;
 			exit(1);
 		}
+		i++;
+	}
+	if (myStack.size() != 1)
+	{
+		std::cerr << RED << "Error : RPN Format is invalid!" << RESET << std::endl;
+		exit(1);
 	}
 	return res;
 }
