@@ -6,7 +6,7 @@
 #    By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/22 11:48:11 by moseddik          #+#    #+#              #
-#    Updated: 2023/03/22 11:48:13 by moseddik         ###   ########.fr        #
+#    Updated: 2023/03/22 14:30:44 by moseddik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRC_DIR			:= src
 OBJ_DIR			:= obj
 
 # *********************************** Files ************************************
-NAME			:= Bitcoin
+NAME			:= btc
 INC				:= BitcoinExchange.hpp
 SRC				:= main.cpp BitcoinExchange.cpp
 OBJ				:= $(SRC:.cpp=.o)
