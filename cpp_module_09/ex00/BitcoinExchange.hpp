@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 11:49:06 by moseddik          #+#    #+#             */
-/*   Updated: 2023/03/23 13:33:42 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/03/28 12:17:25 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,22 +30,21 @@ class BitcoinExchange
 	public:
 		BitcoinExchange();
 		BitcoinExchange( std::string const & fileName );
-		// BitcoinExchange( const BitcoinExchange & src );
+		BitcoinExchange( BitcoinExchange const & src );
 		~BitcoinExchange();
 
-		// BitcoinExchange & operator=( const BitcoinExchange & other );
+		BitcoinExchange & operator=( const BitcoinExchange & other );
 
 		double	getExchangeRate(std::string const & date) const;
-
-		// void	addCurrency( std::string const &currency, double rate );
-		// void	removeCurrency( std::string const &currency );
-		// void	updateRate( std::string const &currency, double rate );
-		// double	convert( std::string const &from, std::string const &to, double amount );
-		// void	saveToFile( std::string const &filename );
-		// void	loadFromFile( std::string const &filename );
 
 	private:
 		std::map<std::string, double> _rates;
 };
+
+bool	isValidValue( std::string value );
+bool	checkFormat( std::string line );
+bool	isValidDate( std::string date );
+double	getValue( std::string value );
+void	checkInputFile( std::string fileName );
 
 #endif
