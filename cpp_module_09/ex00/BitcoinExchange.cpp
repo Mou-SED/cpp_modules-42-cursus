@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 11:50:34 by moseddik          #+#    #+#             */
-/*   Updated: 2023/03/28 12:16:56 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/03/28 12:31:38 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ BitcoinExchange::BitcoinExchange( std::string const & fileName )
 	fileInput.open( fileName, std::ios::in );
 	if ( !fileInput.is_open() )
 	{
-		std::cerr << RED << "Error: could not open file." << std::endl;
+		std::cout << RED << "Error: could not open file." << std::endl;
 		exit(1);
 	}
 	std::getline(fileInput, line); // Skip First Line
 	if ( fileInput.peek() == std::ifstream::traits_type::eof() )
 	{
-		std::cerr << RED << "Error: Data File is empty." << std::endl;
+		std::cout << RED << "Error: Data File is empty." << std::endl;
 		exit(1);
 	}
 	while ( std::getline(fileInput, line) )

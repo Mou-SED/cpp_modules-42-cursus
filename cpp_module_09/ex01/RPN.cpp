@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:32:58 by moseddik          #+#    #+#             */
-/*   Updated: 2023/03/21 21:20:59 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/03/28 13:13:51 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	calculate( std::string & input )
 		}
 		if (myStack.size() <= 1 and iOperator != std::string::npos)
 		{
-			std::cerr << RED << "Error : RPN Format is invalid!" << RESET << std::endl;
+			std::cout << RED << "Error : RPN Format is invalid!" << RESET << std::endl;
 			exit(1);
 		}
 		int num1 = myStack.top();
@@ -96,14 +96,14 @@ int	calculate( std::string & input )
 		input = input.substr(iOperator + 1);
 		if ( isdigit(input.front()) and myStack.size() > 1 )
 		{
-			std::cerr << RED << "Error : RPN Format is invalid!" << RESET << std::endl;
+			std::cout << RED << "Error : RPN Format is invalid!" << RESET << std::endl;
 			exit(1);
 		}
 		i++;
 	}
 	if (myStack.size() != 1)
 	{
-		std::cerr << RED << "Error : RPN Format is invalid!" << RESET << std::endl;
+		std::cout << RED << "Error : RPN Format is invalid!" << RESET << std::endl;
 		exit(1);
 	}
 	return res;
