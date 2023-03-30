@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 11:50:34 by moseddik          #+#    #+#             */
-/*   Updated: 2023/03/28 12:31:38 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/03/30 14:05:42 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,11 @@ bool	isValidValue( std::string value )
 {
 	std::string line = value;
 	value = value.substr(value.find("|") + 1);
+	if ( value.size() == 0 )
+	{
+		std::cout << RED << "Error: bad input => " << line << RESET << std::endl;
+		return false;
+	}
 	bool isDot = false;
 	size_t i = 0;
 
