@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 11:50:34 by moseddik          #+#    #+#             */
-/*   Updated: 2023/03/30 14:25:04 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/03/30 14:28:18 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -222,7 +222,7 @@ void checkInputFile( std::string fileName )
 			continue;
 		if ( !checkFormat(line) or !isValidDate(line))
 			continue;
-		std::cout << line.substr(0, line.find("|"))
+		std::cout << std::fixed << std::setprecision(3) << line.substr(0, line.find("|"))
 			<< " => " << line.substr(line.find("|") + 1) << " = "
 			<< bitcoinExchange.getExchangeRate(line.substr(0, line.find("|"))) * getValue(line) << std::endl;
 	}

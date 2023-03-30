@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 11:49:06 by moseddik          #+#    #+#             */
-/*   Updated: 2023/03/28 12:17:25 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/03/30 14:27:40 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # include <fstream>
 # include <sstream>
 # include <iostream>
+#include <iomanip>
 
 class BitcoinExchange
 {
