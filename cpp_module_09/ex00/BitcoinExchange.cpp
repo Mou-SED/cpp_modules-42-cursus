@@ -6,7 +6,7 @@
 /*   By: moseddik <moseddik@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 11:50:34 by moseddik          #+#    #+#             */
-/*   Updated: 2023/03/30 14:05:42 by moseddik         ###   ########.fr       */
+/*   Updated: 2023/03/30 14:25:04 by moseddik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,8 +91,6 @@ bool	isValidValue( std::string value )
 	bool isDot = false;
 	size_t i = 0;
 
-	if ( value[0] == '-' )
-		i++;
 	while ( i < value.size() )
 	{
 		if ( value[i] == '.' )
